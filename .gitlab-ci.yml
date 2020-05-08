@@ -1,0 +1,75 @@
+image: registry.docker.io
+
+variables:
+  SNORKELDB: "postgres://hatespeech:hatespeech@postgres-postgresql:5432/hatespeech"
+
+
+stages:
+  - parse_corpus
+  - extract_candidates
+  - label_candidates
+  - train_generative_model
+  - test_gold_labels
+  - train_external_model
+
+
+parse_corpus_job:
+  stage: parse_corpus
+  when: manual
+  tags:
+    - hate-speech
+  script:
+    - python .gitlab-ci.py
+
+
+extract_candidates_job:
+  stage: extract_candidates
+  tags:
+    - hate-speech
+  script:
+    - python .gitlab-ci.py
+
+
+label_candidates_job:
+  stage: label_candidates
+  tags:
+    - hate-speech
+  script:
+    - python .gitlab-ci.py
+
+
+train_generative_model_job:
+  stage: train_generative_model
+  when: on_success
+  tags:
+    - hate-speech
+  script:
+    - python .gitlab-ci.py
+  artifacts:
+    name: "dataset_binary_classification_gesnorkelt_$CI_COMMIT_SHORT_SHA"
+    paths:
+      - data/dataset_binary_classification_gesnorkelt.txt
+
+
+test_gold_labels_job:
+  stage: test_gold_labels
+  when: on_success
+  tags:
+    - hate-speech
+  variables:
+    SNORKELDB: ""
+  script:
+    - python .gitlab-ci.py
+
+
+train_external_model_job:
+  stage: train_external_model
+  when: on_success
+  tags:
+    - hate-speech
+  script:
+    - python .gitlab-ci.py
+  artifacts:
+    name: "fasttext_model_binary_classification_$CI_COMMIT_SHORT_SHA"
+    paths:
+      - fasttext_model_binary_classification.bin
