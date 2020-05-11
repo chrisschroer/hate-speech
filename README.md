@@ -6,7 +6,7 @@ Course project related to the NOHATE project to overcome the issue of expensive 
 
 ### NOHATE Project
 - Research project funded by the Federal Ministry of Education and Research of Germany to overcome crises in public communication
-- Focusses on hate speeach about refugees, migration and foreigners on social media platforms or in online forums
+- Focusses on hate speech about refugees, migration and foreigners on social media platforms or in online forums
 - 3 project partners: Freie Universität Berlin, Beuth University of Applied Sciences Berlin and VICO Research & Consulting
 - Main goal: Analyse and understand hatespeech in order to subsequently develop software for recognition of hateful comments
 - Further information: https://www.polsoz.fu-berlin.de/en/kommwiss/v/bmbf-nohate/index.html
