@@ -8,7 +8,7 @@ Course project related to the NOHATE project to overcome the issue of expensive 
 - Research project funded by the Federal Ministry of Education and Research of Germany to overcome crises in public communication
 - Focusses on hate speech about refugees, migration and foreigners on social media platforms or in online forums
 - 3 project partners: Freie Universität Berlin, Beuth University of Applied Sciences Berlin and VICO Research & Consulting
-- Main goal: Analyse and understand hatespeech in order to subsequently develop software for recognition of hateful comments
+- Main goal: Analyse and understand hate speech in order to subsequently develop software for recognition of hateful comments
 - Further information: https://www.polsoz.fu-berlin.de/en/kommwiss/v/bmbf-nohate/index.html
 
 ### Snorkel
@@ -25,7 +25,7 @@ Course project related to the NOHATE project to overcome the issue of expensive 
 - Address the problem of too few gold labels with Snorkel to replace the exhaustive gold labeling task with an automated process using handcrafted rules
 - ~12k comments in German, different sources, unlabeled
 - 500 gold labels (at all, not per label)
-- Consider different classes/types of hatespeech (e.g. Intelligenz, Beschimpfung, Entmenschlichung)
+- Consider different classes/types of hate speech (e.g. Intelligenz, Beschimpfung, Entmenschlichung)
 
 
 ### Goals
